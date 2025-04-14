@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Contact Form</title>
+</head>
+<style>
+    .navbar {  
+    
+    display: flex; /* Uses flexbox for layout */ 
+    
+    justify-content: center; /* Centers the navigation items */ 
+    
+    background-color: hsl(0, 0%, 25%); /* Dark gray background */ 
+    
+    padding: 10px 0; 
+    
+    position: sticky; /* Keeps the navbar fixed at the top while scrolling */ 
+    
+    top: 0; /* Positions the navbar at the top of the page */ 
+    
+    width: 100%; /* Ensures the navbar spans the full width */ 
+    
+    } 
+    navbar li {  
+    
+    display: inline-block; /* Ensures the list items display inline */ 
+    
+    } 
+    
+    
+    /* Navigation Links */ 
+    
+    .navbar a {  
+    
+    color: white; /* Sets text colour to white */ 
+    
+    text-decoration: none; /* Removes underline from links */ 
+    
+    padding: 15px; /* Adds padding around links for better clickability */ 
+    
+    display: block; /* Ensures the entire area is clickable */ 
+    
+    } 
+    .navbar a:hover {  
+    
+    background-color: hsl(0, 0%, 10%); /* Darkens the background on hover */ 
+    
+    } 
+    
+    
+    /* Highlighted Text */ 
+    
+    .highlighted-text {  
+    
+    font-weight: bold; /* Makes the text bold */ 
+    
+    color: red; /* Sets the text color to red */ 
+    
+    } 
+    
+    
+    /* Content Box */ 
+    
+    .content-box {  
+    
+    background-color: rgb(255, 132, 0); /* Sets the background color to a bright orange */ 
+    
+    padding: 15px; /* Adds space inside the box */ 
+    
+    border-radius: 5px; /* Rounds the corners slightly */ 
+    
+    } 
+        
+</style>
+<body>
+    <ul>  
+<nav class="navbar"
+        <li><a href="index.html">Home</a></li>  
+        
+        <li><a href="index.html">Treaty 1</a></li>  
+        
+        <li><a href="index.html">Modern Implementation</a></li>  
+        
+        <li><a href="index.html">Sources</a></li>  
+        
+        <li><a href="index2.html">Contact</a></li>  
+        
+        </ul>
+
+  <h1>Contact Form</h1>
+  <p>Please fill in your details and your question. We'll get back to you soon!</p>
+
+  <form action="/submit" method="post" aria-label="Simple Contact Form">
+
+    <!-- Name Field -->
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Full Name" required aria-required="true"><br><br>
+
+    <!-- Email Field -->
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@email.com" required aria-required="true"><br><br>
+
+    <!-- Phone Number -->
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="123-456-7890"><br><br>
+
+    <!-- Question -->
+    <label for="question">Your Question:</label><br>
+    <textarea id="question" name="question" rows="5" cols="30" placeholder="Type your question here..." required aria-required="true"></textarea><br><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Send</button>
+
+  </form>
+
+</body>
+</html>
