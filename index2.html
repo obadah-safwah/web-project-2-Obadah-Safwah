@@ -1,119 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simple Contact Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Understanding Treaty 1</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    body {
+      background-color: #D5ECDB; /* Light background for readability */
+      font-family: Arial, Helvetica, sans-serif, sans-serif;
+      margin: 0;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    form {
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block; /* Makes the label block-level for better spacing */
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: goldenrod;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+    }
+
+    button:hover {
+      background-color: #d4a017;
+    }
+  </style>
 </head>
-<style>
-    .navbar {  
-    
-    display: flex; /* Uses flexbox for layout */ 
-    
-    justify-content: center; /* Centers the navigation items */ 
-    
-    background-color: hsl(0, 0%, 25%); /* Dark gray background */ 
-    
-    padding: 10px 0; 
-    
-    position: sticky; /* Keeps the navbar fixed at the top while scrolling */ 
-    
-    top: 0; /* Positions the navbar at the top of the page */ 
-    
-    width: 100%; /* Ensures the navbar spans the full width */ 
-    
-    } 
-    navbar li {  
-    
-    display: inline-block; /* Ensures the list items display inline */ 
-    
-    } 
-    
-    
-    /* Navigation Links */ 
-    
-    .navbar a {  
-    
-    color: white; /* Sets text colour to white */ 
-    
-    text-decoration: none; /* Removes underline from links */ 
-    
-    padding: 15px; /* Adds padding around links for better clickability */ 
-    
-    display: block; /* Ensures the entire area is clickable */ 
-    
-    } 
-    .navbar a:hover {  
-    
-    background-color: hsl(0, 0%, 10%); /* Darkens the background on hover */ 
-    
-    } 
-    
-    
-    /* Highlighted Text */ 
-    
-    .highlighted-text {  
-    
-    font-weight: bold; /* Makes the text bold */ 
-    
-    color: red; /* Sets the text color to red */ 
-    
-    } 
-    
-    
-    /* Content Box */ 
-    
-    .content-box {  
-    
-    background-color: rgb(255, 132, 0); /* Sets the background color to a bright orange */ 
-    
-    padding: 15px; /* Adds space inside the box */ 
-    
-    border-radius: 5px; /* Rounds the corners slightly */ 
-    
-    } 
-        
-</style>
+
 <body>
-    <ul>  
-<nav class="navbar"
-        <li><a href="index.html">Home</a></li>  
-        
-        <li><a href="index.html">Treaty 1</a></li>  
-        
-        <li><a href="index.html">Modern Implementation</a></li>  
-        
-        <li><a href="index.html">Sources</a></li>  
-        
-        <li><a href="index2.html">Contact</a></li>  
-        
-        </ul>
+  <!-- Header -->
+  <header>
+    <h1 tabindex="1">Contact Us</h1>
+  </header>
 
-  <h1>Contact Form</h1>
-  <p>Please fill in your details and your question. We'll get back to you soon!</p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#treaty1">Treaty 1</a></li>
+      <li><a href="index.html#implementation">Modern Implementation</a></li>
+      <li><a href="index.html#Sources">Sources</a></li>
+      <li><a href="index2.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <form action="/submit" method="post" aria-label="Simple Contact Form">
+  <!-- Contact Form -->
+  <main>
+    <center><h2 tabindex="2"> Get in Touch</h2></center>
+    <center><p tabindex="3">fill in your details and your question. We'll get back to you soon</p></center>
 
-    <!-- Name Field -->
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="Full Name" required aria-required="true"><br><br>
+    <!-- Contact Form -->
+    <form action="mailto:learnCanadashistory@gmail.com" method="POST" enctype="text/plain" aria-labelledby="contact-form">
+      
+      <!-- Name Field -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" required aria-required="true" aria-describedby="name-help" />
+      <small id="name-help">Please enter your full name.</small>
 
-    <!-- Email Field -->
-    <label for="email">Email Address:</label><br>
-    <input type="email" id="email" name="email" placeholder="example@email.com" required aria-required="true"><br><br>
+      <!-- Email Field -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required aria-required="true" aria-describedby="email-help" />
+      <small id="email-help">We will use this email to respond to your message.</small>
 
-    <!-- Phone Number -->
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone" placeholder="123-456-7890"><br><br>
+      <!-- Question -->
+      <label for="question">Questions Or Concerns:</label>
+      <textarea id="question" name="question" rows="5" placeholder="Type your questions or concerns here..." required aria-required="true" aria-describedby="question-help"></textarea>
+      
 
-    <!-- Question -->
-    <label for="question">Your Question:</label><br>
-    <textarea id="question" name="question" rows="5" cols="30" placeholder="Type your question here..." required aria-required="true"></textarea><br><br>
-
-    <!-- Submit Button -->
-    <button type="submit">Send</button>
-
-  </form>
-
+      <!-- Submit Button -->
+      <button type="submit">Send</button>
+    </form>
+  </main>
 </body>
 </html>
